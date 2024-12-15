@@ -8,6 +8,9 @@
 .navbar {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
 }
 
 .logo {
@@ -86,7 +89,7 @@
 .buttons {
     display: flex;
     align-items: center;
-    margin: 40px 0 40px;
+    margin: 40px 0 40px 40px;
     gap: 36px;
 }
 
@@ -306,7 +309,6 @@ p {
 
 .popular-foods-filters {
     display: flex;
-    flex-wrap: wrap;
     gap: 24px;
     justify-content: center;
     margin-top: 48px;
@@ -707,7 +709,46 @@ p {
     height: 20px;
 }
 
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Style the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 225, 0.3);
+    border-radius: 46px;
+  }
+  
+  /* Style the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
+  /* Style the scrollbar itself */
+  ::-webkit-scrollbar {
+    width: 5px;
+  } 
+  
+.explore-food {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0 0 0;
+}
 
+
+.explore-food-button {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    min-width: 212px;
+}
 
 @media screen and (max-width: 1023px) {
     .trending-sushi {
@@ -741,6 +782,13 @@ p {
     .trending-drinks {
         flex-direction: column;
     }
+    .popular-foods-filters {
+        overflow-x: scroll;
+        justify-content: flex-start;
+        max-width: 100%;
+        padding-bottom: 15px;
+
+    }
 }
 
 @media screen and (min-width: 1024px){ 
@@ -753,6 +801,25 @@ p {
 @media screen and (max-width: 450px){ 
     .menu {
         background-color: #b1454a;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+    }
+    .subscription-form {
+        flex-direction: column;
+        min-width: 100%;
+        border: none;
+        gap: 20px;
+        padding: 14px 0;
+    }
+    .subscription-form input {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 46px;
+        padding: 20px;
+    }
+    .buttons {
+        margin: 40px 0;
+        flex-direction: column;
     }
 }
 
@@ -771,4 +838,16 @@ p {
         justify-content: center;
     }
 }
-
+@media screen and (max-width: 750px) {
+    .about-us-images {
+        flex-direction: column;
+    }   
+    .about-us-button {
+        display: block;
+        top: 47%;
+    }
+    .about-us-sushi3 {
+        border-bottom: 8px solid #fff0de;
+        border-right: none;
+    }
+}
